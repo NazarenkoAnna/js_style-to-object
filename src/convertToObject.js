@@ -7,7 +7,7 @@
  */
 function convertToObject(sourceString) {
   const lines = sourceString.split(';');
-  const result = lines.reduce((acc, rule) => {
+  const styleObject = lines.reduce((acc, rule) => {
     if (!rule.trim()) {
       return acc;
     }
@@ -22,7 +22,7 @@ function convertToObject(sourceString) {
     return acc;
   }, {});
 
-  return result;
+  return styleObject;
 }
 
 module.exports = convertToObject;
